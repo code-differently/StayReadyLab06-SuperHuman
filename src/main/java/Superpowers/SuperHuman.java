@@ -4,10 +4,14 @@ public class SuperHuman extends Human{
     private String alias;
     private enum Affiliation {GOOD, BAD, NEUTRAL};
     private String ability;
+    private String catchPhrase;
+    private String soundEffect;
 
     public SuperHuman() {
         alias = "";
         ability = "";
+        catchPhrase = "";
+        soundEffect = "";
     }
 
     public String getAlias() {
@@ -25,6 +29,27 @@ public class SuperHuman extends Human{
     public void setAbility(String ability) {
         this.ability = ability;
     }
+
+    public String getCatchPhrase() {
+        return this.catchPhrase;
+    }
+    
+    public void setCatchPhrase(String phrase) {
+        this.catchPhrase = phrase;
+    }
+
+    public String getSoundEffect() {
+        return this.soundEffect;
+    }
+    
+    public void setSoundEffect(String sound) {
+        this.soundEffect = sound;
+    }
+
+    public String usePower() {
+        return getCatchPhrase() + " " + getSoundEffect();
+    }
+
 
     private enum Affilation{
         GOOD("Hero"), BAD("Villan"), NEUTRAL("SuperHuman");
