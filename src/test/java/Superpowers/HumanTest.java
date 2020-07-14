@@ -22,31 +22,31 @@ public class HumanTest {
     public void setAge() {
     }
 
-    @org.junit.Test
+    @Test
     public void getGender() {
     }
 
-    @org.junit.Test
+    @Test
     public void setGender() {
     }
 
-    @org.junit.Test
+    @Test
     public void getOccupation() {
     }
 
-    @org.junit.Test
+    @Test
     public void setOccupation() {
     }
 
-    @org.junit.Test
+    @Test
     public void getAddress() {
     }
 
-    @org.junit.Test
+    @Test
     public void setAddress() {
     }
 
-    @org.junit.Test
+    @Test
     public void toString() {
     }
 }

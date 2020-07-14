@@ -2,12 +2,15 @@ package Superpowers;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class SuperHumanTest {
 
     @Test
     public void getHeroName() {
+        //Given
+
+        //When
+
+        //Then
     }
 
     @Test

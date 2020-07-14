@@ -2,7 +2,7 @@ package Superpowers;
 
 public class SuperHuman extends Human {
 
-    private enum Affiliations {GOOD,BAD,NEUTRAL};
+    public enum Affiliations {GOOD,BAD,NEUTRAL};
     private String heroName;
     private String power;
     private Affiliations affiliations;
@@ -71,5 +71,17 @@ public class SuperHuman extends Human {
         this.heroName = heroName;
         affiliations = affiliations;
         this.power = power;
+    }
+
+    public String catchPhrase(){
+        return "Frosting these hoes!";
+    }
+
+    public String usePower(){
+        return catchPhrase() + "Splat!";
+    }
+
+    public static void main(String[] args) {
+
     }
 }
