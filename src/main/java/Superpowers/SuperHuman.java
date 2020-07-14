@@ -1,5 +1,7 @@
+package Superpowers;
+
 public class SuperHuman extends Human{
-    private String alias; 
+    private String alias;
     private enum Affiliation {GOOD, BAD, NEUTRAL};
     private String ability;
 
@@ -15,8 +17,7 @@ public class SuperHuman extends Human{
     public void setAlias(String alias) {
         this.alias = alias;
     }
-    
-    
+
     public String getAbility(){
         return this.ability;
     }
@@ -29,11 +30,13 @@ public class SuperHuman extends Human{
         GOOD("Hero"), BAD("Villan"), NEUTRAL("SuperHuman");
         private String whichSide;
 
-        public int getWhichSide(){
+        public String getWhichSide(){
             return whichSide;
         }
+
         private Affilation(String whichSide){
             this.whichSide = whichSide;
         }
     }
 }
+

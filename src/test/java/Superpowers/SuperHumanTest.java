@@ -1,15 +1,17 @@
+package Superpowers;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.Assert;
 
 public class SuperHumanTest {
     SuperHuman superHuman;
-    
+
     @Before
     public void initialize() {
-        superHuman = new SuperHuman();    
+        superHuman = new SuperHuman();
     }
-    
+
     @Test
     public void getAliasTest() {
         //given
@@ -17,7 +19,7 @@ public class SuperHumanTest {
         //when
         String actual = superHuman.getAlias();
         //then
-        Assert.assertEquals(expected, actual);  
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -28,10 +30,10 @@ public class SuperHumanTest {
         superHuman.setAlias("Spider-Man");
         String actual = superHuman.getAlias();
         //then
-        Assert.assertEquals(expected, actual);  
+        Assert.assertEquals(expected, actual);
     }
 
-    @Test 
+    @Test
     public void getAbilityTest(){
         //Given
         String expected = "";
@@ -41,7 +43,7 @@ public class SuperHumanTest {
         Assert.assertEquals(expected,actual);
     }
 
-    @Test 
+    @Test
     public void setAbilityTest(){
         //Given
         String expected = "Flying";
