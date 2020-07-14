@@ -34,7 +34,6 @@ public class HumanTest {
         //Then
         Assert.assertEquals(expected, actual);
     }
-
     @Test
     public void setNameTest() {
         //Given
@@ -65,7 +64,6 @@ public class HumanTest {
         //Then
         Assert.assertEquals(expected, actual);
     }
-
     @Test
     public void setGenderTest() {
         //Given
@@ -76,7 +74,6 @@ public class HumanTest {
         //Then
         Assert.assertEquals(expected, actual);
     }
-
     @Test
     public void getOccupationTest() {
         //Given
@@ -86,7 +83,6 @@ public class HumanTest {
         //Then
         Assert.assertEquals(expected, actual);
     }
-
     @Test
     public void setOccupationTest() {
         //Given
@@ -97,5 +93,4 @@ public class HumanTest {
         //Then
         Assert.assertEquals(expected, actual);
     }
-
 }

@@ -14,7 +14,6 @@ public class Human {
     private LocalDate dob;
     private String gender;
     private String occupation;
-
     public Human() {
         id = 0;
         name = "";
