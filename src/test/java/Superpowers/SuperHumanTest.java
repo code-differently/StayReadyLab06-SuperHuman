@@ -15,12 +15,14 @@ public class SuperHumanTest {
     Affiliation affiliation=Affiliation.GOOD;
     String ability="Air bending";
     String alias="Air man";
+    String power="Air go!";
+    String catchPhrase="Air is firstname!";
     int id=1;
     SuperHuman bob;
 
     @Before
     public void setUp(){
-        bob=new SuperHuman(name, gender, occupation, dob, id, alias, ability, affiliation);
+        bob=new SuperHuman(name, gender, occupation, dob, id, alias, ability, affiliation, power, catchPhrase);
     }
 
     @Test
@@ -36,6 +38,8 @@ public class SuperHumanTest {
         Affiliation actualAffiliation=bob.getAffiliation();
         String actualAbility=bob.getAbility();
         String actualAlias=bob.getAlias();
+        String actualPower=bob.getPower();
+        String actualCatch=bob.catchPhrase();
 
         // Then
         Assert.assertEquals(name, actualName);
@@ -46,6 +50,8 @@ public class SuperHumanTest {
         Assert.assertEquals(ability, actualAbility);
         Assert.assertEquals(id, actualID);
         Assert.assertEquals(alias, actualAlias);
+        Assert.assertEquals(power, actualPower);
+        Assert.assertEquals(catchPhrase, actualCatch);
 
 
     }
@@ -115,6 +121,46 @@ public class SuperHumanTest {
 
         // Then
         Assert.assertEquals(ability, actualAbility);
+
+
+    }
+
+    @Test
+    public void getPowerTest(){
+        // Given
+
+        // When
+        String actualPower=bob.getPower();
+
+        // Then
+        Assert.assertEquals(power, actualPower);
+
+
+    }
+
+    @Test
+    public void catchPhraseTest(){
+        // Given
+
+        // When
+        String actualCatch=bob.catchPhrase();
+
+        // Then
+        Assert.assertEquals(catchPhrase, actualCatch);
+
+
+    }
+
+    @Test
+    public void usePowerTest(){
+        // Given
+        String expected=catchPhrase+power;
+
+        // When
+        String actual=bob.usePower();
+
+        // Then
+        Assert.assertEquals(expected, actual);
 
 
     }
