@@ -25,11 +25,12 @@ public class Human {
     }
 
     public Human(String name, LocalDate dob, String gender, String occupation) {
+        this();
         this.id = id;
         this.name = name;
         this.dob = dob;
         this.gender = gender;
-        this.occupation = occupation
+        this.occupation = occupation;
     }
 
     public static int getId() {
