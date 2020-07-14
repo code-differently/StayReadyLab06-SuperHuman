@@ -23,6 +23,10 @@ public class Human {
         occupation = "";
     }
 
+    public int getId() {
+        return this.id;
+    }
+
     public String getName() {
         return name;
     }
@@ -31,12 +35,8 @@ public class Human {
         this.name = name;
     }
     
-    public LocalDate getLocalDate() {
+    public LocalDate getAge() {
         return dob;
-    }
-
-    public void setLocalDate(LocalDate date) {
-        dob = date;
     }
 
     public String getGender() {

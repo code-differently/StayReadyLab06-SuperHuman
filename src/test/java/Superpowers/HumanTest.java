@@ -16,6 +16,16 @@ public class HumanTest {
     }
     
     @Test
+    public void getIdTest() {
+        //Given
+        int expected = 0;
+        //When
+        int actual = human.getId();
+        //Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
     public void getNameTest() {
         //Given
         String expected = "";
@@ -37,24 +47,11 @@ public class HumanTest {
     }
     
     @Test
-    public void getLocalDateTest() {
+    public void getAgeTest() {
         //Given
         LocalDate expected = LocalDate.now();
         //When
-        LocalDate actual = human.getLocalDate();
-        //Then
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void setLocalDateTest() {
-        //Given
-        LocalDate newDate = LocalDate.of(2015, 3, 4);
-        LocalDate expected = newDate;
-        //When
-        human.setLocalDate(newDate);
-        LocalDate actual = human.getLocalDate();
-
+        LocalDate actual = human.getAge();
         //Then
         Assert.assertEquals(expected, actual);
     }
