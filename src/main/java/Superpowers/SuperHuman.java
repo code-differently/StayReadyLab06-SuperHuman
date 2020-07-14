@@ -49,7 +49,7 @@ public class SuperHuman extends Human {
     }
 
     public String usePower(){
-        return this.catchPhrase+this.power;
+        return this.catchPhrase+" "+this.power;
     }
 
     public String getPower(){
