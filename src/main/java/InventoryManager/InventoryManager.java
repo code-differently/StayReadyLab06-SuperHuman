@@ -23,11 +23,9 @@ public class InventoryManager {
         return 0;
     }
 
-    public int removeItem(pr){
+    public int removeItem(Product id){
         return 0;
     }
-
-    public int re
 
 
 }
