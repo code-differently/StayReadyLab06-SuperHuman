@@ -12,13 +12,20 @@ public class HumanTest {
 
     @Before
     public void setup(){
-        this.human = new Human();
+        this.human = new Human(24, "Chi-Khan Foosball", LocalDate.of(2012, 3, 12), "male", "Molecular Biologist");
     }
-    
+
+    @Test
+    public void constructorTest() {
+        String expected = "id: 24 name: Chi-Khan Foosball age: 8 gender: male occupation: Molecular Biologist";
+        String actual = human.toString();
+        Assert.assertTrue(actual.equals(expected));
+    }
+
     @Test
     public void getIdTest() {
         //Given
-        int expected = 0;
+        int expected = 24;
         //When
         int actual = human.getId();
         //Then
@@ -28,7 +35,7 @@ public class HumanTest {
     @Test
     public void getNameTest() {
         //Given
-        String expected = "";
+        String expected = "Chi-Khan Foosball";
         //When
         String actual = human.getName();
         //Then
@@ -46,19 +53,41 @@ public class HumanTest {
     }
     
     @Test
-    public void getAgeTest() {
+    public void getAgeNotNullTest() {
         //Given
-        LocalDate expected = LocalDate.now();
+        int expectedNumYears = 8;
         //When
-        LocalDate actual = human.getAge();
+        int actualNumYears = human.getAge();
         //Then
-        Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expectedNumYears, actualNumYears);
+    }
+
+    @Test
+    public void getAgeNullTest() {
+        //Given
+        human.setAge(null);
+        int expectedNumYears = 0;
+        //When
+        int actualNumYears = human.getAge();
+        //Then
+        Assert.assertEquals(expectedNumYears, actualNumYears);
+    }
+
+    @Test
+    public void setAgeTest() {
+        LocalDate date = LocalDate.of(1000, 2, 23);
+        int expectedAge = 1020;
+
+        human.setAge(date);
+        int actualAge = human.getAge();
+
+        Assert.assertEquals(expectedAge, actualAge);
     }
     
     @Test
     public void getGenderTest() {
         //Given
-        String expected = "";
+        String expected = "male";
         //When
         String actual = human.getGender();
         //Then
@@ -77,7 +106,7 @@ public class HumanTest {
     @Test
     public void getOccupationTest() {
         //Given
-        String expected = "";
+        String expected = "Molecular Biologist";
         //When
         String actual = human.getOccupation();
         //Then

@@ -1,17 +1,21 @@
 package Superpowers;
 
+import java.time.LocalDate;
+
 public class SuperHuman extends Human{
     private String alias;
-    private enum Affiliation {GOOD, BAD, NEUTRAL};
+    private Affiliation affiliation;
     private String ability;
     private String catchPhrase;
     private String soundEffect;
 
-    public SuperHuman() {
-        alias = "";
-        ability = "";
-        catchPhrase = "";
-        soundEffect = "";
+    public SuperHuman(int id, String name, LocalDate dob, String gender, String occupation, String alias, String ability, String catchPhrase, String soundEffect, Affiliation affilation) {
+        super(id, name, dob, gender, occupation);
+        this.alias = alias;
+        this.ability = ability;
+        this.catchPhrase = catchPhrase;
+        this.soundEffect = soundEffect;
+        this.affiliation = affilation;
     }
 
     public String getAlias() {
@@ -20,6 +24,14 @@ public class SuperHuman extends Human{
 
     public void setAlias(String alias) {
         this.alias = alias;
+    }
+
+    public Affiliation getAffiliation() {
+        return affiliation;
+    }
+
+    public void setAffiliation(Affiliation affiliation) {
+        this.affiliation = affiliation;
     }
 
     public String getAbility(){
@@ -50,18 +62,9 @@ public class SuperHuman extends Human{
         return getCatchPhrase() + " " + getSoundEffect();
     }
 
-
-    private enum Affilation{
-        GOOD("Hero"), BAD("Villan"), NEUTRAL("SuperHuman");
-        private String whichSide;
-
-        public String getWhichSide(){
-            return whichSide;
-        }
-
-        private Affilation(String whichSide){
-            this.whichSide = whichSide;
-        }
+    @Override
+    public String toString() {
+        return "id: " + super.getId() + " name: "+ super.getName() + " age: " + super.getAge() + " gender: " + super.getGender() + " occupation: " + super.getOccupation() + "ability: " + ability + " power: " + usePower() + " affiliation: " + affiliation;
     }
 }
 
