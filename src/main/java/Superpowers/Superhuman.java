@@ -1,5 +1,7 @@
 package Superpowers;
 
+import java.time.LocalDate;
+
 enum Afilliation
 {
     Good,Bad,Neutral;
@@ -12,8 +14,11 @@ public class Superhuman extends Human {
     private String catchPhrase;
     private String power; 
 
+    
+
     Superhuman()
     {
+        super();
         this.alias = "My alias";
         this.ability = "My ability";
         this.afilliation = Afilliation.Good;
@@ -21,14 +26,22 @@ public class Superhuman extends Human {
         this.power = "power";
 
     }
+    Superhuman(String pow,String abi , int id, LocalDate dob ,String name,String gender,String occupation)
+    {
+        super(id, dob, name, gender, occupation);
+        this.ability = abi;
+        this.power = pow; 
+    }
     Superhuman(String ali, String abi, Afilliation afill, String cp, String pow)
     {
+        super();
         this.alias= ali;
         this.ability = abi; 
         this.afilliation = afill;
         this.catchPhrase=cp;
         this.power = pow;
     }
+    
 
     public String getalias()
     {
