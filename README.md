@@ -1,4 +1,4 @@
-# Good and Bad
+# Good and Bad - By Aaron Allen & Lucious Morrison
 
 ## Objectives
 
