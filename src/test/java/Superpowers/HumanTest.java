@@ -46,7 +46,5 @@ public class HumanTest {
     public void setAddress() {
     }
 
-    @Test
-    public void toString() {
-    }
+
 }
