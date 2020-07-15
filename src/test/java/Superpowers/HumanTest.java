@@ -4,6 +4,9 @@ import org.junit.Test;
 import org.junit.Assert;
 
 public class HumanTest {
+    //paramore
+
+    Human the_simp = new Human();
 
     @Test
     public void getName() {
