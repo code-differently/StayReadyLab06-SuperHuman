@@ -27,5 +27,4 @@ public class Inventory {
     public double getTotalValue(){
         return 0; //total price together
     }
-
 }

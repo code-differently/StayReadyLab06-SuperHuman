@@ -20,15 +20,15 @@ public class HumanTest {
         // When
         Human testHuman = new Human(expectedName, expectedId, expectedDateOfBirth, expectedGender, expectedOccupation);
         String actualName = testHuman.getName();
-        int actualId = testHuman.getAge();
-        LocalDate actualDob = testHuman.getDateOfBirth();
+        int actualId = testHuman.getid();
+        LocalDate actualDateOfBirth = testHuman.getDateOfBirth();
         String actualGender = testHuman.getGender();
         String actualOccupation = testHuman.getOccupation();
 
         // Then
         Assert.assertEquals(expectedName, actualName);
         Assert.assertEquals(expectedId, actualId);
-        Assert.assertEquals(expectedDateOfBirth, actualDob);
+        Assert.assertEquals(expectedDateOfBirth, actualDateOfBirth);
         Assert.assertEquals(expectedGender, actualGender);
         Assert.assertEquals(expectedOccupation, actualOccupation);
     }
@@ -142,7 +142,7 @@ public class HumanTest {
     @Test
     public void getOccupationTest() {
         // Given
-        String expectedOccupation = "SuperHero";
+        String expectedOccupation = "Cook";
 
         // When
         String actualOccupation = testHuman.getOccupation();
@@ -154,7 +154,7 @@ public class HumanTest {
     @Test
     public void setOccupationTest() {
         // Given
-        String expectedOccupation = "SuperHero";
+        String expectedOccupation = "Call Girl";
 
         // When
         testHuman.setOccupation(expectedOccupation);
