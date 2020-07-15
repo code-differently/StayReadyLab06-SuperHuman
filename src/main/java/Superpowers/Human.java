@@ -1,6 +1,7 @@
 package Superpowers;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 /**
  * Complete the 'Human' class in the Superpowers Package that has fields for: name, age, gender,
@@ -8,32 +9,37 @@ import java.time.LocalDate;
  * Then create a SuperHuman class and UNIT TEST that subclasses the first with fields for good or bad,
  * hero name, super ability. As before, create methods for retrieving field data and printing to screen.
  */
+
 public class Human {
-    private static int id = 1;
+    // Declaring variables, count keeps track of Human instances
+    private static int count = 0;
+    private int id;
     private String name;
     private LocalDate dob;
     private String gender;
     private String occupation;
 
+    // Overloading human constructor
     public Human() {
-        this.id = id;
-        this.name = "";
+        // Assigns the id the current number of instances
+        this.id = count;
+        this.name = "NoNameGiven";
         this.dob = LocalDate.now();
         this.gender = "Unknown";
         this.occupation = "Unemployed";
-        id++;
+        count++;
     }
 
     public Human(String name, LocalDate dob, String gender, String occupation) {
         this();
-        this.id = id;
         this.name = name;
         this.dob = dob;
         this.gender = gender;
         this.occupation = occupation;
     }
 
-    public static int getId() {
+    // Getters and setters
+    public int getId() {
         return id;
     }
 
@@ -69,7 +75,18 @@ public class Human {
         this.occupation = occupation;
     }
 
-    public Integer getAge() {
-        return null;
+    public static int getCount() {
+        return count;
+    }
+
+    public int getAge() {
+        LocalDate now = LocalDate.now();
+        LocalDate dob = this.getDob();
+
+        return Period.between(dob, now).getYears();
+    }
+
+    public String toString() {
+        return "ID: " + getId() + "\tName: " + getName() + "\tAge: " + getAge();
     }
 }
