@@ -12,8 +12,8 @@ public class SuperHuman extends Human {
     private String soundEffect;
 
 
-    public SuperHuman(String name, int id, String gender, String occupation, LocalDate dateOfBirth, String address){
-        super(name, id, gender, dateOfBirth, occupation);
+    public SuperHuman(String name, int id, String gender, String occupation, LocalDate dateOfBirth, Affiliation affiliation){
+        super(name, id, dateOfBirth, gender, occupation);
         this.affiliation = affiliation;
     }
 

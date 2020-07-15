@@ -5,7 +5,7 @@ import org.junit.Test;
 public class HumanTest {
     //paramore
 
-    Human the_simp = new Human();
+    //Human the_simp = new Human();
 
     @Test
     public void getName() {
