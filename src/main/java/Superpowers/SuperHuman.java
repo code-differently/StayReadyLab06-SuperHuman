@@ -44,7 +44,7 @@ public class SuperHuman extends Human {
     }
 
     public void setAffiliations(Affiliation affiliations) {
-        this.affiliation = affiliation;
+        this.affiliation = affiliations;
     }
 
     public String catchPhrase(){
