@@ -12,10 +12,9 @@ public class SuperHuman extends Human {
     private String soundEffect;
 
 
-    public SuperHuman(String name, String gender, String occupation, LocalDate dateOfBirth, String address){
-        super(name, gender, occupation, dateOfBirth, address, );
+    public SuperHuman(String name, int id, String gender, String occupation, LocalDate dateOfBirth, String address){
+        super(name, id, gender, dateOfBirth, occupation);
         this.affiliation = affiliation;
-
     }
 
     public String getAlias() {
@@ -34,19 +33,12 @@ public class SuperHuman extends Human {
         this.ability = ability;
     }
 
-    public Affiliations getAffiliations() {
-        return affiliations;
+    public Affiliation getAffiliations() {
+        return affiliation;
     }
 
-    public void setAffiliations(Affiliations affiliations) {
-        this.affiliations = affiliations;
-    }
-
-    public SuperHuman(String alias, Affiliations affiliations, String ability) {
-        super();
-        this.alias = alias;
-        affiliations = affiliations;
-        this.ability = ability;
+    public void setAffiliations(Affiliation affiliations) {
+        this.affiliation = affiliation;
     }
 
     public String catchPhrase(){
@@ -60,8 +52,6 @@ public class SuperHuman extends Human {
     public static void main(String[] args) {
 
         //Create a main method that instantiates a few Human and SuperHuman classes
-
-
 
     }
 }

@@ -14,11 +14,11 @@ public class HumanTest {
     }
 
     @Test
-    public void getAge() {
+    public void getid() {
     }
 
     @Test
-    public void setAge() {
+    public void setid() {
     }
 
     @Test
@@ -37,15 +37,4 @@ public class HumanTest {
     public void setOccupation() {
     }
 
-    @Test
-    public void getAddress() {
-    }
-
-    @Test
-    public void setAddress() {
-    }
-
-   // @Test
-   // public void toString() {
-    //}
 }

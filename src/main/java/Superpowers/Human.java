@@ -16,15 +16,12 @@ public class Human {
     private String gender;
     private String occupation;
 
-    private String address;
-
-    public Human(String name, int id, LocalDate dateOfBirth, String gender, String occupation, String address) {
+    public Human(String name, int id, LocalDate dateOfBirth, String gender, String occupation) {
         this.name = name;
         this.id = id;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;
         this.occupation = occupation;
-        this.address = address;
     }
 
     public String getName() {
@@ -41,6 +38,11 @@ public class Human {
 
     public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public int getAge() {
+        LocalDate today = LocalDate.now();
+        return today.getYear() - this.dateOfBirth.getYear();
     }
 
     public int getid() {
@@ -61,14 +63,6 @@ public class Human {
 
     public void setOccupation(String occupation) {
         this.occupation = occupation;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
 }
