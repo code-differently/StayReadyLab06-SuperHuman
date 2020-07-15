@@ -7,7 +7,6 @@ import java.time.LocalDate;
 
 public class SuperHumanTest {
 
-    SuperHuman bad_thang = new SuperHuman("Cupcake", 100, "Female", "Cook", LocalDate.of(2000,3,15);
     @Test
     public void getHeroName() {
         String expected = "Cupcake";
