@@ -15,6 +15,7 @@ public class SuperHuman extends Human {
     public SuperHuman(String name, int id, String gender, String occupation, LocalDate dateOfBirth,
                       String alias, String ability, Affiliation affiliation, String catchPhrase, String soundEffect){
         super(name, id, dateOfBirth, occupation, gender);
+
         this.affiliation = affiliation;
         this.alias = alias;
         this.ability = ability;
