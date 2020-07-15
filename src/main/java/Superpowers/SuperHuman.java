@@ -1,61 +1,37 @@
 package Superpowers;
 
+import java.time.LocalDate;
+
 public class SuperHuman extends Human {
 
-    public enum Affiliations {GOOD,BAD,NEUTRAL};
-    private String heroName;
-    private String power;
-    private Affiliations affiliations;
+    public enum Affiliation {GOOD,BAD,NEUTRAL};
+    private String alias;
+    private String ability;
+    private Affiliation affiliation;
+    private String catchPhrase;
+    private String soundEffect;
 
-    public SuperHuman(){
-        super();
-        heroName = "Cupcake";
-        affiliations = Affiliations.NEUTRAL;
-        power = "Quirk: Frost Shots";
+
+    public SuperHuman(String name, String gender, String occupation, LocalDate dateOfBirth, String address){
+        super(name, gender, occupation, dateOfBirth, address, );
+        this.affiliation = affiliation;
+
     }
 
-    public SuperHuman(String name, int age, String gender, String occupation, String address, String heroName, Affiliations affiliations, String power) {
-        super(name, age, gender, occupation, address);
-        this.heroName = heroName;
-        affiliations = affiliations;
-        this.power = power;
+    public String getAlias() {
+        return alias;
     }
 
-    public SuperHuman(String name, int age, String gender, String heroName, Affiliations affiliations, String power) {
-        super(name, age, gender);
-        this.heroName = heroName;
-        affiliations = affiliations;
-        this.power = power;
-    }
-
-    public SuperHuman(String name, int age, String heroName, Affiliations affiliations, String power) {
-        super(name, age);
-        this.heroName = heroName;
-        affiliations = affiliations;
-        this.power = power;
-    }
-
-    public SuperHuman(String name, String heroName, Affiliations affiliations, String power) {
-        super(name);
-        this.heroName = heroName;
-        affiliations = affiliations;
-        this.power = power;
-    }
-
-    public String getHeroName() {
-        return heroName;
-    }
-
-    public void setHeroName(String heroName) {
-        this.heroName = heroName;
+    public void setAlias(String alias) {
+        this.alias = alias;
     }
 
     public String getPower() {
-        return power;
+        return ability;
     }
 
-    public void setPower(String power) {
-        this.power = power;
+    public void setPower(String ability) {
+        this.ability = ability;
     }
 
     public Affiliations getAffiliations() {
@@ -66,11 +42,11 @@ public class SuperHuman extends Human {
         this.affiliations = affiliations;
     }
 
-    public SuperHuman(String heroName, Affiliations affiliations, String power) {
+    public SuperHuman(String alias, Affiliations affiliations, String ability) {
         super();
-        this.heroName = heroName;
+        this.alias = alias;
         affiliations = affiliations;
-        this.power = power;
+        this.ability = ability;
     }
 
     public String catchPhrase(){
@@ -82,6 +58,10 @@ public class SuperHuman extends Human {
     }
 
     public static void main(String[] args) {
+
+        //Create a main method that instantiates a few Human and SuperHuman classes
+
+
 
     }
 }

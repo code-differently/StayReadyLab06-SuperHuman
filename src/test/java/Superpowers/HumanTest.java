@@ -1,7 +1,6 @@
 package Superpowers;
 
 import org.junit.Test;
-import org.junit.Assert;
 
 public class HumanTest {
 
@@ -46,7 +45,7 @@ public class HumanTest {
     public void setAddress() {
     }
 
-    @Test
-    public void toString() {
-    }
+   // @Test
+   // public void toString() {
+    //}
 }

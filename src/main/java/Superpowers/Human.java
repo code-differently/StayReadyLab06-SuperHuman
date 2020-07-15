@@ -12,51 +12,19 @@ public class Human {
 
     private String name;
     private LocalDate dateOfBirth;
-    private int age;
+    private int id;
     private String gender;
     private String occupation;
 
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
     private String address;
 
-    public Human(String name, int age, String gender, String occupation, String address) {
+    public Human(String name, int id, LocalDate dateOfBirth, String gender, String occupation, String address) {
         this.name = name;
-        this.age = age;
+        this.id = id;
+        this.dateOfBirth = dateOfBirth;
         this.gender = gender;
         this.occupation = occupation;
         this.address = address;
-    }
-
-    public Human(String name, int age, String gender) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-    }
-
-    public Human(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public Human(String name) {
-        this.name = name;
-    }
-
-    public Human() {
-        this.name = "John";
-        this.age = 25;
-        this.gender = "Male";
-        this.occupation = "Construction";
-        this.address = "1150 Mulberry Ave";
-        this.dateOfBirth = LocalDate.of(2000,3,15);
-
     }
 
     public String getName() {
@@ -67,12 +35,16 @@ public class Human {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public int getid() {
+        return id;
     }
 
     public String getGender() {
@@ -99,14 +71,4 @@ public class Human {
         this.address = address;
     }
 
-    public String toString(){
-        String person = "Name: "+this.getName()+" Age: "+this.getAge()+" Gender: "+this.getGender()+"\n"+
-                "Occupation: "+this.getOccupation()+" Address: "+this.getAddress();
-        return person;
-    }
-
-    public static void main(String[] args) {
-      //  Human paul = new Human("paul",32,"male","cook");
-       // System.out.println(paul);
-    }
 }
