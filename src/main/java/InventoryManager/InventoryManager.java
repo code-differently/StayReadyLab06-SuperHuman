@@ -9,4 +9,5 @@ package InventoryManager;
  * Note: Inventory and InventoryManager should not be the same class!!!
  */
 public class InventoryManager {
+
 }
