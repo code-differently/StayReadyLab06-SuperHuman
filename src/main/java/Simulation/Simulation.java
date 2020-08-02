@@ -1,4 +1,8 @@
-package Superpowers;
+package Simulation;
+
+import Superpowers.Affiliation;
+import Superpowers.Human;
+import Superpowers.SuperHuman;
 
 import java.time.LocalDate;
 
